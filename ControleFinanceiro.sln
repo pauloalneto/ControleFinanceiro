@@ -29,6 +29,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ControleFinanceiro.SpaUi", 
 		VWDPort = "49542"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Common", "3 - Common", "{FB2E2188-B900-4073-B55E-06B66CA9ACD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Common", "ControleFinanceiro.Common\ControleFinanceiro.Common.csproj", "{9E60CBE1-0801-45AA-95E6-18316A8AAA82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{45C849CD-EB03-455C-BE4C-9A88EF220B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45C849CD-EB03-455C-BE4C-9A88EF220B5F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{45C849CD-EB03-455C-BE4C-9A88EF220B5F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9E60CBE1-0801-45AA-95E6-18316A8AAA82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E60CBE1-0801-45AA-95E6-18316A8AAA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E60CBE1-0801-45AA-95E6-18316A8AAA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E60CBE1-0801-45AA-95E6-18316A8AAA82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{20136634-765A-4FA2-AE99-43697DF2DCCE} = {A67135A4-E9B1-431D-B17B-5433CAC72045}
 		{45C849CD-EB03-455C-BE4C-9A88EF220B5F} = {A5057E7B-D21D-4FE1-8FAA-2A551BCB9AFE}
+		{9E60CBE1-0801-45AA-95E6-18316A8AAA82} = {FB2E2188-B900-4073-B55E-06B66CA9ACD8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {45121749-A94B-4D19-88BD-9D75EE1E89B5}
