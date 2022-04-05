@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Api", "C
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ControleFinanceiro.SpaUi", "ControleFinanceiro.SpaUi\", "{45C849CD-EB03-455C-BE4C-9A88EF220B5F}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49542"
 		Debug.AspNetCompiler.PhysicalPath = "ControleFinanceiro.SpaUi\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49542\"
@@ -31,7 +31,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ControleFinanceiro.SpaUi", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Common", "3 - Common", "{FB2E2188-B900-4073-B55E-06B66CA9ACD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Common", "ControleFinanceiro.Common\ControleFinanceiro.Common.csproj", "{9E60CBE1-0801-45AA-95E6-18316A8AAA82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Common", "ControleFinanceiro.Common\ControleFinanceiro.Common.csproj", "{9E60CBE1-0801-45AA-95E6-18316A8AAA82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
