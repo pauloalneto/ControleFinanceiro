@@ -1,18 +1,14 @@
 ﻿using ControleFinanceiro.Api.Domain.Entity;
 using ControleFinanceiro.Api.Infrastructure.Data.Maps;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace ControleFinanceiro.Api.Infrastructure.Data.Context
 {
     public class ControleFinanceiroContext : DbContext
     {
-        protected ControleFinanceiroContext()
+        protected ControleFinanceiroContext(DbContextOptions<ControleFinanceiroContext> options) : base(options)
         {
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
