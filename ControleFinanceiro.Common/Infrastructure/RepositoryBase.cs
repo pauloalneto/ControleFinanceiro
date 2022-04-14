@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ControleFinanceiro.Common.Infrastructure
 {
-    public class RepositoryBase<T> : IRepository<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         protected DbContext context;
         protected DbSet<T> dbSet;

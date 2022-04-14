@@ -1,4 +1,9 @@
+using ControleFinanceiro.Api.Config;
+using ControleFinanceiro.Api.Domain.Interface.Repository;
 using ControleFinanceiro.Api.Infrastructure.Data.Context;
+using ControleFinanceiro.Api.Infrastructure.Data.Repository;
+using ControleFinanceiro.Common.Infrastructure;
+using ControleFinanceiro.Common.Interface.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,10 +32,12 @@ namespace ControleFinanceiro.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
             services.AddDbContext<ControleFinanceiroContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddControllers();
+            
+            ControleFinanceiroContainer.Config(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

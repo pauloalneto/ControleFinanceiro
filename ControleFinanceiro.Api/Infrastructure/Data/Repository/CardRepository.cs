@@ -8,12 +8,16 @@ namespace ControleFinanceiro.Api.Infrastructure.Data.Repository
 {
     public class CardRepository : RepositoryBase<Card>, ICardRepository
     {
+        
         public CardRepository(ControleFinanceiroContext context) : base(context)
         {
+           
         }
 
         public Card GetById(int id)
         {
+            
+
             return this.GetAll().SingleOrDefault(_ => _.Id == id);
         }
     }

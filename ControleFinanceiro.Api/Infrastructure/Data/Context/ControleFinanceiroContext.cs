@@ -7,8 +7,17 @@ namespace ControleFinanceiro.Api.Infrastructure.Data.Context
 {
     public class ControleFinanceiroContext : DbContext
     {
-        protected ControleFinanceiroContext(DbContextOptions<ControleFinanceiroContext> options) : base(options)
+        private IConfiguration configuration;
+        public ControleFinanceiroContext(DbContextOptions<ControleFinanceiroContext> options,
+            IConfiguration configuration) : base(options)
         {
+            this.configuration = configuration;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //optionsBuilder.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection"));
+            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
