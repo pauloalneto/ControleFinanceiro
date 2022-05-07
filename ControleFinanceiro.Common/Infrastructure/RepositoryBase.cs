@@ -23,5 +23,37 @@ namespace ControleFinanceiro.Common.Infrastructure
         {
             return this.dbSet.AsNoTracking();
         }
+
+        public T Add(T entity)
+        {
+            var result = this.dbSet.Add(entity).Entity;
+
+            this.Save();
+
+            return result;
+        }
+
+        public T Update(T entity)
+        {
+            var entry = this.context.Update(entity);
+            this.dbSet.Attach(entity);
+            entry.State = EntityState.Modified;
+
+            this.Save();
+
+            return entity;
+        }
+
+        public void Remove(T entity)
+        {
+            this.dbSet.Remove(entity);
+            this.Save();
+        }
+
+        public void Save()
+        {
+            this.context.SaveChanges();
+        }
+
     }
 }
