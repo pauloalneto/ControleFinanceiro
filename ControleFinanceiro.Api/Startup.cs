@@ -37,6 +37,8 @@ namespace ControleFinanceiro.Api
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
             ControleFinanceiroContainer.Config(services);
+
+            services.AddAutoMapper(ControleFinanceiroAutoMapper.config());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
